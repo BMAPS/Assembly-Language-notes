@@ -1,0 +1,5 @@
+example movl arg1, arg0
+b (byte) = 8 bits
+w (word) = 16 bits
+l (long) = 32 bits
+q (quad) = 64 bits

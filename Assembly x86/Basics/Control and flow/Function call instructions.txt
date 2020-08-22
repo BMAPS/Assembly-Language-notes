@@ -1,0 +1,15 @@
+-----------------------------------------------
+call procedure
+
+Pushes the instructions that follow the call onto the stack 
+then jumps to that location
+-----------------------------------------------
+
+ret [val]
+
+Loads the next value on the stack into EIP,
+then pops the specified number of bytes off
+the stack.
+
+If val is not supplied, the instruction will not pop
+any values off the stack after returning.

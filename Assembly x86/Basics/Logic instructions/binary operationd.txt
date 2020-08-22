@@ -1,0 +1,8 @@
+
+and destination, mask
+
+or destination, mask
+
+xor destination, mask
+
+not argument

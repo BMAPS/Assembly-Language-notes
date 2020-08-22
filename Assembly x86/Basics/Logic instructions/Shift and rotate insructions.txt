@@ -1,0 +1,22 @@
+shr dest, src
+//logical shift dest to the right by src bits
+
+shl dest, src
+//logical shift left
+
+
+arithmetic shift
+sar dest, src
+//right
+sal dest, src
+//left
+
+extended shifts for 16 - 32 bit
+shld dest, src, cnt
+//cnt is to shift the most significant bit from dest by the amount in source
+
+rotate instructions
+ror variable, offset
+//rotate right by offset
+rol dest, src
+//rotate left by offset

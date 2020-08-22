@@ -1,0 +1,126 @@
+Data transfer 
+-----------------------------------------------------------
+MOVE:
+mov src , dest GAS Syntax
+mov dest, src Intel Synax
+-----------------------------------------------------------
+Data swap:
+xchg src, dest
+xchg dest, src
+------------------------------------------------------------
+Assembly/Control flow
+------------------------------------------------------------
+
+Compare instructions:
+test arg0, arg1 GAS Syntax
+test arg1, arg0 Intel Syntax
+
+Peforms a bit wise logical AND on arg0 and arg1.
+the result we can refer to as comman bits and sets the flags
+ZF(zero), ZF(sign), PF(parity) based on those commonBits.
+common bits is then discarded.
+Application...
+passing the same register twice checks for non negativity.
+example
+test rax, rax
+zf is set if rax is zero
+pf is set if rax has a even number of bits
+-------------------------------------------------------------
+
+CMP:
+cmp minuend, subtrahend
+
+comparison is created by subtracting the two values and sets
+the EFLAGS register in the same ways as the sub instruction.
+example
+cmp eax, 0
+jl branch
+//jump if eax is less than zero
+-------------------------------------------------------------
+
+Jump Instructions
+-------------------------------------------------------------
+
+Unconditional jump:
+jmp loc
+-------------------------------------------------------------
+
+Jump if equal:
+je loc
+//ZF = 1
+-------------------------------------------------------------
+
+Jump if not equal
+jne loc
+//ZF = 0
+-------------------------------------------------------------
+
+Jump if greater 
+jg loc
+//SF = 0  & ZF =0
+-------------------------------------------------------------
+
+Jump if greater or equal
+jge loc
+//SF = OF or ZF = 1
+-------------------------------------------------------------
+
+jump if above
+ja loc
+//cf = 0 & zf = 0
+-------------------------------------------------------------
+
+Jump if above or equal
+jae loc
+//cf = 0 or zf = 1
+-------------------------------------------------------------
+
+jump if lesser
+jl loc
+SF != OF
+-------------------------------------------------------------
+
+Jump if less or equal
+jle loc
+//SF != OF or ZF = 1
+--------------------------------------------------------------
+
+Jump if below
+jb loc
+//CF = 1
+--------------------------------------------------------------
+
+Jump if below or equal
+jbe loc
+//CF = 1 or ZF = 1
+--------------------------------------------------------------
+
+Jump if overflow
+jo loc
+//OF =1 
+--------------------------------------------------------------
+
+Jump if zero
+jz loc
+//zf = 1
+--------------------------------------------------------------
+
+Jump if not zero
+jnz loc
+//zf = 0
+--------------------------------------------------------------
+
+Jumped if signed
+js loc
+//sf = 1
+--------------------------------------------------------------
+
+Jump if not signed
+jns loc
+//sf = 0
+--------------------------------------------------------------
+
+Jump if counter register is zero
+jrxcz loc
+// jecxz, jcxz
+--------------------------------------------------------------

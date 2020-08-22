@@ -1,0 +1,22 @@
+add dest, src
+
+sub dest, src
+
+mul arg
+//multiplier arg with the value of corresponding byte length in the ax register
+//al = 1 byte ax = 2bytes eax = 4 byttes
+
+imul arg
+//mul but only for signed
+
+div arg
+//divides the following registers by the value in arg
+//ax & dx
+//remainders are stored in ah / dx / edx -- respective to byte length
+
+idiv arg
+//div only as signed
+
+neg arg
+Arithmetically negates the arg
+

@@ -1,0 +1,2 @@
+Registers need to be prefixed with % 
+Constant numbers need to be prefixed with $

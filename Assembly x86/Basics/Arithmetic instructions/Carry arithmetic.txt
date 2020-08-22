@@ -1,0 +1,7 @@
+adc dest, src
+//add with carry. Adds src + cf to dest.
+normally happens after add instructions to deal with numbers twice as large as the regsiters
+
+sbb dest, src
+//subtract with borrow. subs src with cf
+

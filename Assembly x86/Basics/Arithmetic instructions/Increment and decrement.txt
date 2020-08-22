@@ -1,0 +1,6 @@
+inc augend
+//increments the register value by 1 and is alot faster than add args, 1
+
+dec minuend
+
+//same but -1

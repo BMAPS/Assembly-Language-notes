@@ -1,0 +1,26 @@
+interupt instruction
+int arg
+example 
+int 0x0A ; CALLS INERRUPT 10
+
+Types of interrupts
+Hardware interrupt
+Software interrupt
+Exceptions
+
+Hardware interrupts are triggered by hardware devices.
+when you type on your keyboard the key triggers a hardware interrupt.
+The processor stops what its doing to execute the code that handles
+the keyboards input.
+typically reading the key you've pressed into a buffer in memory.
+their interrupts are asynchonous, meaning their occurrence is unrelated to the
+Instructions being executed at the time they're raised.
+
+Software interrupts
+there are a series of software interruptsvthat are used to transfer control to
+a function in the OS kernal.
+software interrupts are triggered by the instruction int.
+for example:
+int 14h 
+;triggers the interrupt 0x14.
+the procssor stops the current program, and jumps to the code to handle the interrupt 14.
